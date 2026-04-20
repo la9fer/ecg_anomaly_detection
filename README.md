@@ -1,10 +1,10 @@
 # ECG Arrhythmia Main Pipeline
 
 This folder contains the final ECG pipeline with:
-- Patient-wise data split
+- Patient wise data split
 - CNN training and evaluation
 - Classical ML baseline models (SVM, RandomForest, LogisticRegression)
-- Real-time style alert simulation
+- Real time style alert simulation
 
 ## Files
 
