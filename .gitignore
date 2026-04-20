@@ -1,0 +1,26 @@
+﻿# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv311/
+venv/
+main_pipeline/.venv311/
+main_pipeline/venv/
+
+# NumPy / stats (regenerate with prepare_data)
+*.npy
+*.npz
+!main_pipeline/norm_stats.npz
+
+# Trained models (regenerate with training scripts)
+models/
+main_pipeline/models/
+
+# Dataset (local download)
+mitdb/
+mit-bih-arrhythmia-database-1.0.0/
+
+# Optional local paths
+input/
