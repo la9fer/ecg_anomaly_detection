@@ -1,4 +1,4 @@
-# ECG Arrhythmia Main Pipeline
+# Electrocardiogram (ECG) Arrhythmia Detection Main Pipeline
 
 This folder contains the final ECG pipeline with:
 - Patient wise data split
