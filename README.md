@@ -3,7 +3,7 @@
 This folder contains the final ECG pipeline with:
 - Patient wise data split
 - CNN training and evaluation
-- Classical ML baseline models (Support Vector Machine, RandomForest, LogisticRegression)
+- Classical ML baseline models (Support Vector Machine, Random Forest, Logistic Regression)
 - Real time style alert simulation
 
 ## Files
@@ -25,7 +25,7 @@ Runs `prepare_data` → `train_cnn` → `test_cnn` → `train_classical_ml` → 
 
 - `output/<timestamp>/final_comparison.md`
 - `output/<timestamp>/cnn_test_metrics.txt` (full CNN evaluation printout)
-- `output/<timestamp>/accuracy_summary.txt` (one-line accuracy)
+- `output/<timestamp>/accuracy_summary.txt` (one line accuracy)
 - `output/<timestamp>/RUN_SUMMARY.txt`
 - `output/<timestamp>/log_*.txt` for each step
 
@@ -94,7 +94,7 @@ Example:
 python serial_infer.py --port COM5 --baud 115200 --threshold 0.45 --hop 120
 ```
 
-## Config knobs (env vars)
+## Configuration knobs (environment variables)
 
 - `ALERT_THRESHOLD` (default: `0.5`)
 - `MAX_BEATS` (default: `0`, means process full record)
@@ -128,4 +128,4 @@ It creates `final_comparison.md` with a table:
 Key insight to report:
 - CNN gives best performance due to automatic feature learning.
 - Classical ML is more interpretable and often faster.
-- This is a practical trade-off between **performance vs interpretability**.
+- This is a practical trade off between **performance vs interpretability**.
