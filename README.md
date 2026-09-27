@@ -6,6 +6,19 @@ This folder contains the final ECG pipeline with:
 - Classical ML baseline models (Support Vector Machine, Random Forest, Logistic Regression)
 - Real time style alert simulation
 
+## Results
+
+| Model         | Accuracy | Precision | Recall  | F1     | Notes                                      |
+| ------------- | -------- | --------- | ------- | ------ | ------------------------------------------- |
+| CNN           | 99.44%   | 90.91%    | 100.00% | 95.24% | Best overall performance, automatic feature learning |
+| Random Forest | 97.78%   | 100.00%   | 60.00%  | 75.00% | Highest precision among classical baselines |
+| SVM           | 97.78%   | 80.00%    | 80.00%  | 80.00% | Strong, balanced classical baseline         |
+| Logistic Reg. | 95.56%   | 55.56%    | 100.00% | 71.43% | Most interpretable, fastest to train        |
+
+Full breakdown (including PCA-reduced variants) in [`main_pipeline/final_comparison.md`](main_pipeline/final_comparison.md).
+
+**Key insight:** the CNN wins on accuracy, recall, and F1 through automatic feature learning, but Random Forest actually edges it out on precision (100% vs. 90.91%), a real accuracy/precision trade off between deep learning and classical baselines, not a clean sweep for either approach.
+
 ## Files
 
 - `prepare_data.py`: preprocess ECG, build beat windows, patient-wise train/val/test split, save normalization stats
