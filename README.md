@@ -10,7 +10,7 @@ This folder contains the final ECG pipeline with:
 
 | Model         | Accuracy | Precision | Recall  | F1     | Notes                                      |
 | ------------- | -------- | --------- | ------- | ------ | ------------------------------------------- |
-| CNN           | 99.44%   | 90.91%    | 100.00% | 95.24% | Best overall performance, automatic feature learning |
+| CNN           | 99.44%   | 90.91%    | 100.00% | 95.24% | CNN and classical models are compared on the same patient-wise test split; see output/ for results |
 | Random Forest | 97.78%   | 100.00%   | 60.00%  | 75.00% | Highest precision among classical baselines |
 | SVM           | 97.78%   | 80.00%    | 80.00%  | 80.00% | Strong, balanced classical baseline         |
 | Logistic Reg. | 95.56%   | 55.56%    | 100.00% | 71.43% | Most interpretable, fastest to train        |
@@ -134,11 +134,11 @@ It creates `final_comparison.md` with a table:
 
 | Model | Accuracy | Precision | Recall | F1 | Notes |
 |---|---:|---:|---:|---:|---|
-| CNN | ... | ... | ... | ... | Best performance |
+| CNN | ... | ... | ... | ... | CNN and classical models are compared on the same patient-wise test split; see output/ for results |
 | SVM | ... | ... | ... | ... | Strong baseline |
 | RandomForest | ... | ... | ... | ... | Stable |
 
 Key insight to report:
-- CNN gives best performance due to automatic feature learning.
+- CNN and classical models are compared on the same patient-wise test split; see output/ for results.
 - Classical ML is more interpretable and often faster.
 - This is a practical trade off between **performance vs interpretability**.
